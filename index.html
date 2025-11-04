@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <!-- meta情報 -->
+    <!-- ファビコン -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="stylesheet" href="common/common.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- 外部フォントやアイコン -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <!-- 必要があればjsのプリロードや非同期読み込み -->
+</head>
+<!-- ============================ -->
+<body>
+    <!-- ローディング============================ -->
+    <div class="loading">
+        <div class="loadingContents">
+            <div class="loadingText">Welcome to<br> My Portfolio</div>
+            <img class="flourish" src="images/Flourish.png" alt="ローディング画面の植物の装飾">
+        </div>
+    </div>
+    <!-- ============================ -->
+    <header class="header">
+        <div class="headerTop">
+            <a class="logo" href="" ><h1 style="display: none;">ポートフォリオ</h1><img src="https://placehold.jp/200x30.png" alt="ロゴ"></a>
+            <nav class="headerNav">
+                <ul>
+                    <li><a href="index.html">トップページ</a></li>
+                    <li><a href="profile/index.html">プロフィール</a></li>
+                    <li><a href="contact/index.php">コンタクト</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="headerMain">
+            <p class="mainTheme">
+                未経験から、新たな一歩を<br>
+                未来へ繋ぐ架け橋に
+            </p>
+            <p>
+                アイリスの花には「希望」「良い知らせ」「信じる心」という花言葉があります。<br>
+                名前の由来はギリシャ神話の「虹の女神イリス」で、虹は「未来への架け橋」を象徴しています。<br>
+                <br>
+                プログラマーとして踏み出したばかりの自分と未来を。<br>
+                そしてサイトを見て下さった皆様方との未来を繋ぐ架け橋になって欲しい。<br>
+                そんな思いからアイリスの花をメインテーマにしました。
+            </p>
+        </div>
+    </header>
+        <!-- ============================ -->
+    <div class="container">
+        <main>
+            <div class="outerWrap">
+                <section class="skills">
+                    <h2>スキル</h2>
+                    <div class="contentsWrap">
+                        <div class="lang">
+                            <h3>言語</h3>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                        <div class="dataBase">
+                            <h3>データベース</h3>
+                            <ul>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="library">
+                            <h3>ライブラリ・フレームワーク</h3>
+                            <ul>
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button type="button" class="modalOpen">スキル詳細＋</button>
+                        </div>
+                        <div class="tool">
+                            <h3>ツール</h3>
+                            <dl>
+                                <dt>コーディング関係</dt>
+                                    <dd>windows11</dd>
+                                    <dd>Visual Studio Code</dd>
+                                    <dd>figma</dd>
+                                    <dd>GitHub</dd>
+                                    <dd>XAMPP</dd>
+                                    <dd>ChatGPT</dd>
+                                <dt>その他のツール</dt>
+                                    <dd>Chatwork</dd>
+                                    <dd>google スプレッドシート</dd>
+                                    <dd>Microsoft Excel</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+                <div class="modalLayer">
+                    <div class="modal">
+                        <div>
+                            <button type="button" class="modalClose">close ✕</button>
+                        </div>
+                        <div class="tabChange">
+                            <div><input id="radioHTML" class="tabBGChange" value="tabHTML" type="radio" name="skillTab" checked="checked"><label for="radioHTML">HTML</label></div>
+                            <div><input id="radioCSS" class="tabBGChange" value="tabCSS" type="radio" name="skillTab"><label for="radioCSS">CSS</label></div>
+                            <div><input id="radioJS" class="tabBGChange" value="tabJS" type="radio" name="skillTab"><label for="radioJS">JavaScript</label></div>
+                            <div><input id="radioPHP" class="tabBGChange" value="tabPHP" type="radio" name="skillTab"><label for="radioPHP">PHP</label></div>
+                        </div>
+                        <div class="modalPanel">
+                            <ul id="tabHTML" class="tab active">
+                                <dt>【セマンティックなマークアップ】</dt><dd>sectionやhタグを使った階層構造を明確にし、リストタグの使い分けなどをはじめ、意味や用途に合わせた適切なタグ利用を心掛けています</dd>
+                                <dt>【アクセシビリティ】</dt><dd>alt属性への代替テキストやフォーム要素へlabelの設定などスクリーンリーダーを考慮して行っています</dd>
+                                <dt>【フォーム】</dt><dd>required, pattern, maxlengthなどを用いたバリデーション属性を活用し事前にエラーを回避します</dd>
+                                <dt>【SEOの考慮】</dt><dd>タイトルやmeta情報、見出しにどういった言葉を入れるかによって検索性に影響が出ることを理解しています。より良い記述法についてはこれから勉強していきたいと思います</dd>
+                                <dt>【保守性・再利用性を意識したHTML設計】</dt><dd>命名規則を統一し、適切なインデントで可読性を確保できるよう意識しています</dd>
+                            </ul>
+                            <ul id="tabCSS" class="tab">
+                                <dt>【レスポンシブ対応】</dt><dd>複数のブレイクポイントを設定し、常にユーザーが利用しやすいデザインになるように意識しています</dd>
+                                <dt>【モダンなレイアウト設計】</dt><dd>FlexboxやGridを取り入れ、柔軟かつ統一感のあるレイアウトを目指しています</dd>
+                                <dt>【疑似要素を使った装飾やコンテンツの追加】</dt><dd>構造とデザインを切り分け、HTMLをできるだけシンプルに保ちます</dd>
+                                <dt>【アニメーションの作成】</dt><dd>transitionやkeyframesを用いてローディングスピナーやスライドショーを作成できます</dd>
+                                <dt>【ダークモードやテーマ切り替え】</dt><dd>メディアクエリやJavaScriptを用いてテーマ切り替えを行うことができます</dd>
+                                <dt>【ライブラリ・フレームワーク】</dt><dd>Bootstrapを用いたレスポンシブなレイアウト、モーダルやアコーディオンなどの機能を使えます</dd>
+                                <dt>【CSS設計】</dt><dd>これから勉強していきます。OOCSS、SMACSS、BEMなどの手法を学び、各特徴から適切な手法を使えるように理解を深めていきたいです</dd>
+                            </ul>
+                            <ul id="tabJS" class="tab">
+                                <dt>【変数や定数を使った値の管理】</dt><dd>変数・定数の使い分けやスコープ、データ型などに注意し値を管理します</dd>
+                                <dt>【条件分岐、ループ処理】</dt><dd>if, switch, 三項演算子やfor, whileの使い分けなど、場面に応じて適切な構文を考えて使用します</dd>
+                                <dt>【関数の利用】</dt><dd>一連の処理を関数にまとめ、引数を用いて利用することができます</dd>
+                                <dt>【DOM操作】</dt><dd>要素の取得・変更・追加・削除などの基本操作を行えます。また取得したデータにはElement, HTMLCollection, Nodedtstなどの違いがあることを認識しています</dd>
+                                <dt>【イベントリスナーの設定】</dt><dd>addEventdtstenerメソッドを用いてクリックイベントなどを設定できます</dd>
+                                <dt>【タイマー処理】</dt><dd>setTimeout, setInterval, requestAnimationFrameなどを使用し、タイマー機能の作成やアニメーションを実装しています</dd>
+                                <dt>【非同期処理】</dt><dd>Promise, async/awaitを使ったAPI通信を実装した経験があります</dd>
+                                <dt>【外部APIの利用】</dt><dd>fetchを使って外部のAPIから天気データを取得し、画面に反映するプラクティスを行いました</dd>
+                                <dt>【JSONの利用】</dt><dd>JSONを用いたデータの送受信や加工のプラクティスを行いました</dd>
+                                <dt>【ライブラリ・フレームワーク】</dt><dd>jQueryを用いた基本的な記述と外部APIの導入経験があります</dd>
+                            </ul>
+                            <dl id="tabPHP" class="tab">
+                                <dt>【配列、連想配列】</dt><dd>データの追加/削除、ソート、フィルタリングなどの基本的な操作が行えます</dd>
+                                <dt>【条件分岐、ループ処理】</dt><dd>if, switch, 三項演算子やfor, foreachの使い分けなど、場面に応じて適切な構文を考えて使用します</dd>
+                                <dt>【関数の利用】</dt><dd>一連の処理を関数にまとめ、引数を用いて利用することができます</dd>
+                                <dt>【フォーム・リクエスト処理】</dt><dd>POSTを用いたデータの登録・更新処理、未入力や形式チェックなどのバリデーションで適切にデータを処理します</dd>
+                                <dt>【データベース操作】</dt><dd>SQLを用いたデータの登録・更新・検索・取得・削除などの基本操作を行うことができます</dd>
+                                <dt>【セッションの利用】</dt><dd>ログイン機能やショッピングカート機能、フォーム入力データの維持などのため活用し、実装を行いました</dd>
+                                <dt>【セキュリティ対策】</dt><dd>XSS、SQLインジェクション、CSRFに対しそれぞれhtmlspecialchars、プリペアードステートメント、トークンを用いて対策を行いました</dd>
+                                <dt>【HTML、JavaScriptとの連携】</dt><dd>埋め込み構文を活用しHTMLをシンプルに記述、AJAXを用いてDBの情報を画面に反映するなどの連携を行なうことができます</dd>
+                                <dt>【コード設計】</dt><dd>requireを用いてヘッダーや関数などのファイルを共通化し再利用できるようにしています</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <section class="works">
+                    <h2>制作物</h2>
+                    <ul>
+                        <li>
+                            <h3>スケジュール調整アプリ</h3>
+                            <p>
+                                <a href="https://mr81010pf.stars.ne.jp/portfolio/scheduler/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/schedulerImg.png" alt="スケジュール調整アプリのサムネイル">
+                                </a>
+                            </p>
+                            <p>　PHP・DBを用いて複数人で予定（日付＆時間）を合わせるためのスケジュールアプリを自主制作しました。</p>
+                            <p>製作期間：2025年9月～10月　約80時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>　製作時間短縮のため、デザイン面はブートストラップを用いてシンプルに整えました。〇×を一つずつ変える手間を考慮し一括で変更する機能を実装。〇×選択画面の見栄え、イベントページの結果が分かりづらい点が課題。解決策としてグラフ表示を追加したいと考えています。</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Bootstrap</span>
+                                <span>レスポンシブ</span>
+                                <span>会員登録</span>
+                                <span>ログイン</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="https://github.com/ryo384/scheduler" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <li>
+                            <h3>架空のドーナツ販売サイト</h3>
+                            <p>
+                                <a href="https://mr81010pf.stars.ne.jp/trainingSchool/ccdonuts/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/donutsHero.png" alt="架空のドーナツ販売サイトのサムネイル">
+                                </a>
+                            </p>
+                            <p>　職業訓練校で「デザインカンプを元にPHP・DBを用いた架空のECサイトを作る課題」で制作しました。</p>
+                            <p>製作期間：2025年9月～10月　約80時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>　DB設計や取得した値の扱い方、セキュリティ面など、どのようにすればよいか考えながら制作を行いました。PHPを用いることで可能になった共通部の再利用やループ処理によるhtmlのコード簡略化のメリットをできるだけ取り入れました。</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>レスポンシブ</span>
+                                <span>ECサイト</span>
+                                <span>会員登録</span>
+                                <span>クレジットカード登録</span>
+                                <span>ログイン</span>
+                                <span>カート</span>
+                                <span>お気に入り</span>
+                                <span>商品検索</span>
+                                <span>売上ランキング</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="https://github.com/ryo384/ccdonuts/tree/main/ccdonuts" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <li>
+                            <h3>架空の台湾観光案内サイト</h3>
+                            <p>
+                                <a href="http://mr81010pf.stars.ne.jp/trainingSchool/webProgramming2/index.html" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/topHead1.jpg" alt="台湾観光案内サイトのサムネイル">
+                                </a>
+                            </p>
+                            <p>　職業訓練校で「デザインカンプを元にHTML・CSS・JavaScriptを用いた架空のウェブサイトをグループで作る課題」で制作しました。</p>
+                            <p>製作期間：2025年7月～8月　約60時間　×　3人</p>
+                            <p>担当：トップページの一部、台南、モーダル以外のJavaScriptすべて</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>　グループでのwebサイト制作の難しさを感じました。お互いプログラミングに対する理解も浅い中で記述法に関する齟齬や確認不足があり修正が多くなってしまうなどの課題が出ました。事前に綿密な確認や会議を行う重要性を感じました。</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>レスポンシブ</span>
+                                <span>グループワーク</span>
+                                <span>ドロワー</span>
+                                <span>モーダル</span>
+                                <span>カルーセル</span>
+                                <span>ローディングアニメーション</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="https://github.com/ryo384/webProgramingPractice2" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <li>
+                            <h3>架空のリフォームサイト（2）</h3>
+                            <p>
+                                <a href="http://mr81010pf.stars.ne.jp/trainingSchool/webProgramming1/version2/index.html" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/hero.jpg" alt="リフォームサイト2のサムネイル">
+                                </a>
+                            </p>
+                            <p>　職業訓練校で「デザインカンプを元にHTML・CSSで架空のウェブサイトを作る課題」で時間が余った為、ブートストラップを用いて制作を行いました。</p>
+                            <p>製作期間：2025年6月～6月　約30時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>カスタムCSSを極力使用せずブートストラップ中心で制作しました。サイズなどデザインカンプ通りとはいきませんでしたが、CSSを1/10にまで短縮できた事は驚きでした。この時点ではJavaScriptの知識が無く、ハンバーガーメニューの挙動を制御出来なかった点が課題として残りました。</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                                <span>レスポンシブ</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="https://github.com/ryo384/webProgramingPractice1ver2" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <li>
+                            <h3>架空のリフォームサイト（1）</h3>
+                            <p>
+                                <a href="http://mr81010pf.stars.ne.jp/trainingSchool/webProgramming1/version1/index.html" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/hero.jpg" alt="リフォームサイト1のサムネイル">
+                                </a>
+                            </p>
+                            <p>　職業訓練校で「デザインカンプを元にHTML・CSSで架空のウェブサイトを作る課題」で制作しました。</p>
+                            <p>製作期間：2025年6月～6月　約30時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>
+                                        　デザインカンプ通りに作ることを目指しました。1px単位のズレの原因や解決策を調査するのに四苦八苦しました。単位をrem中心で構築し、ブラウザのフォントサイズ変更にも対応しました。
+                                    </p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>レスポンシブ</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="https://github.com/ryo384/webProgramingPractice1" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <!-- <li>
+                            <h3>タイトルタイトル</h3>
+                            <p>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://placehold.jp/858585/ffffff/400x300.png?text=no-image" alt="">
+                                </a>
+                            </p>
+                            <p>テキストテキスト</p>
+                            <p>製作期間：2025年？月～？月　ーー時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>テキストテキスト</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>テキスト</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li>
+                        <li>
+                            <h3>タイトルタイトル</h3>
+                            <p>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://placehold.jp/858585/ffffff/400x300.png?text=no-image" alt="">
+                                </a>
+                            </p>
+                            <p>テキストテキスト</p>
+                            <p>製作期間：2025年？月～？月　ーー時間</p>
+                            <details>
+                                <summary>制作後の感想・工夫・課題など</summary>
+                                <div class="itemWrap">
+                                    <p>テキストテキスト</p>
+                                </div>
+                            </details>
+                            <p>キーワード：
+                                <span>テキスト</span>
+                            </p>
+                            <p class="link">ソースコード：<a href="" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+                        </li> -->
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div> <!-- /container -->
+    <!-- ============================ -->
+    <footer class="footer">
+        <div class="outerWrap">
+            <p class="link">当サイトのソースコード：<a href="" target="_blank" rel="noopener noreferrer">GitHub</a>で確認する</p>
+            <p class="link">ご連絡は<a href="contact/index.php">こちら</a>から</p> <!-- hrefにメールアドレス -->
+            <p class="copy"><small>©2025 Ryo Miyashita</small></p>
+        </div>
+    </footer>
+    <!-- 雨アニメーション============================ -->
+    <canvas id="rainCanvas"></canvas>
+    <!-- ドロワー============================ -->
+    <div class="drawerOpen">
+        <button>
+            <div class="flowerIcon">
+                <div class="flower flower1"><span class="scale"></span></div>
+                <div class="flower flower2"><span class="scale"></span></div>
+                <div class="flower flower3"><span class="scale"></span></div>
+                <div class="flower flower4"><span class="scale"></span></div>
+                <div class="flower flower5"><span class="scale"></span></div>
+            </div>
+        </button>
+    </div>
+    <div class="drawer">
+        <nav class="drawerNav">
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="profile/index.html">プロフィール</a></li>
+                <li><a href="contact/index.php">コンタクト</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ============================ -->
+    <!-- クッキーの読み込み -->
+    <!-- jQueryなどのライブラリ本体読み込み　→　プラグイン読み込み -->
+    <!-- ページ共通scriptファイルの読み込み　→　ページ固有scriptファイル読み込み-->
+<script src="common/script.js"></script>
+</body>
+</html>

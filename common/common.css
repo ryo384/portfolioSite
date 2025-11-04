@@ -1,0 +1,392 @@
+@charset "UTF-8";
+body {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+}
+.outerWrap {
+    width: calc(100% - 40px);
+    max-width: 450px;
+    margin: 0 auto;
+}
+section {
+    padding: 40px 0;
+    margin-top: 40px;
+}
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    padding: 20px 0;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.2rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+p, dt, dd, ul {
+    line-height: 1.5;
+}
+.link a {
+    color: blue;
+}
+.link a:hover {
+    border-bottom: 2px solid blue;
+}
+
+
+/* セクションフェードイン用 */
+section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.2s ease-out;
+}
+.sectionFadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ドロワー */
+.drawerOpen {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    z-index: 99;
+}
+    /* 花 */
+.drawerOpen .flower {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    transform-origin: bottom center;
+}
+.flower span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: violet;
+    clip-path: polygon(50% 0%, 68% 16%, 81% 36%, 87% 64%, 76% 88%, 53% 100%, 28% 90%, 16% 65%, 19% 37%, 32% 17%);
+    transform-origin: bottom;
+}
+.flower1 {
+    z-index: 19;
+}
+.flower2 {
+    transform: rotate(72deg);
+    z-index: 9;
+}
+.flower3 {
+    transform: rotate(144deg);
+    z-index: 19;
+}
+.flower4 {
+    transform: rotate(216deg);
+    z-index: 9;
+}
+.flower5 {
+    transform: rotate(288deg);
+    z-index: 19;
+}
+@keyframes flowerOpen {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.scale {
+    animation-name: flowerOpen;
+    animation-duration: 2s;
+}
+
+
+/* サイドパネル */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(155, 155, 155, 0.5);
+    /* transition: 0.3s ease; */
+    z-index: 90;
+
+}
+.drawer nav {
+    margin-top: 50px;
+}
+.drawer ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 4px;
+    /* background-color: rgba(246, 255, 119, 0.904); */
+    background-image: linear-gradient(45deg, 
+        rgb(255, 196, 255) 0%, 
+        rgb(163, 163, 255) 33%, 
+        rgb(186, 255, 186) 50%, 
+        rgb(255, 255, 172) 66%, 
+        rgb(255, 181, 181) 100%
+    );
+    transition: 0.3s ease;
+    z-index: 199;
+}
+
+
+.show {
+    /* transition: 0.3s ease; */
+    transform: translateX(-200px);
+}
+
+
+
+
+/* ローディング */
+.noScroll {
+    overflow: hidden;
+}
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgb(130, 112, 209);
+    z-index: 9999;
+}
+.loaded {
+    animation-name: loaded;
+    animation-duration: 2s;
+}
+@keyframes loaded {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.loadingContents {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+}
+.flourish {
+    position: absolute;
+    /* top: 40%;
+    left: 20%; */
+    top: -80px;
+    left: -112px;
+    width: 300px;
+    height: auto;
+    animation-name: opacity;
+    animation-duration: 2.5s;
+}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.loadingText {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    width: 200px;
+    transform: translate(-80%, -50%);
+    font-size: 40px;
+    animation-name: opacity;
+    animation-duration: 2.5s;
+    z-index: 9;    
+}
+
+
+
+/* ヘッダー */
+header {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #000, -1px -1px 0 #000,
+        -1px 1px 0 #000, 1px -1px 0 #000,
+        0px 1px 0 #000,  0-1px 0 #000,
+        -1px 0 0 #000, 1px 0 0 #000;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+.logo img {
+    display: none; /* ロゴ入れるかどうするか */
+    width: 200px;
+    height: 30px;
+}
+
+.headerNav {
+    display: none;
+}
+
+.headerMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    transform: translate(-50%, -50%);
+}
+.headerMain p {
+    margin-top: 20px;
+}
+
+
+
+/* フッター */
+.footer {
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+.footer p:not(:first-child) {
+    margin-top: 4px;
+}
+.copy {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .outerWrap {
+        max-width: 1200px;
+    }
+    section {
+        margin-top: 80px;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .drawerOpen {
+        display: none;
+    }
+
+
+    .headerNav {
+        display: block;
+        width: fit-content;
+    }
+    .headerNav ul {
+        display: flex;
+        gap: 40px;
+        /* font-size: 1.8rem; */
+    }
+    .headerNav ul li {
+        position: relative;
+    }
+    .headerNav ul li::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../images/rainbow.png) no-repeat center top / cover;
+        opacity: 0;
+        transition:opacity 1s ease;
+        pointer-events: none;
+    }
+    .headerNav ul li:hover::before {
+        opacity: 0.5;
+    }
+    .headerMain {
+        top: 60%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+
+    .footer {
+        margin-top: 80px;
+    }
+
+
+    /* ローディング */
+    .loadingContents {
+        width: 50%;
+    }   
+    .flourish {
+        position: absolute;
+        /* top: 40%;
+        left: 50%; */
+        top: -90px;
+        left: 0;
+    }
+    .loadingText {
+        position: absolute;
+        /* top: 50%;
+        left: 50%; */
+        width: auto;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+    }
+
+
+}
+
+
+
+@media screen and (min-width:1200px) {
+    body {
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+
+
+}

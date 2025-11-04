@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* body {
+    background: url(images/mainImageIris.jpg) no-repeat center center / cover;
+} */
+body.modalScrollOff {
+    overflow: hidden;
+}
+
+
+header::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--bg, url("images/mainImageIris.jpg"));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
+header::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--after-bg, none);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* pointer-events: none; */
+    opacity: 0;
+    transition: opacity 5s ease;
+    z-index: -1;
+}
+header.fadeIn::after {
+    opacity: 1;
+}
+
+
+/* .container {
+    background-color: rgba(220, 190, 255, 0.6);
+} */
+section {
+    position: relative;
+    background-color: rgba(220, 190, 255, 0.6);
+    z-index: 2;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+
+
+
+/* アコーディオンメニュー */
+
+details {
+    transition: 0.3s ease;
+}
+details:active {
+    background-color: rgba(255, 230, 255, 0.5);
+    cursor: pointer;
+}
+
+
+/* ======= */
+.itemWrap {
+    overflow: hidden;
+}
+
+
+/* ======= */
+
+
+
+/* ヘッダー */
+/* header {
+    background: url(images/mainImageIris.jpg) no-repeat center center / cover;
+} */
+.mainTheme {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* スキル */
+.skills dt:not(:first-child),
+.skills details:not(:first-child)
+.dataBase,
+.library {
+    margin-top: 40px;
+}
+.modal dt,
+.skills dd,
+.skills li {
+    padding: 16px 16px 0;
+}
+.modal dd {
+    padding: 0 32px 0;
+}
+.modal dd:last-child {
+    padding-bottom: 16px;
+}
+/* .modal li::before,
+.skills dd::before,
+.skills li::before {
+    content: "・";
+} */
+/* .skills summary {
+    font-size: 1.3rem;
+}
+.skills details {
+    padding: 20px;
+    background-color: rgba(240, 255, 255, 0.548);
+} */
+
+.modalOpen {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid black;
+    margin: 40px 20px 40px auto;
+    background-color: rgb(219, 196, 255);
+    z-index: 999;
+    cursor: pointer;
+}
+.modalClose {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.skills {
+    transform: none;
+}
+.modalLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    cursor: default;
+    z-index: -10;
+}
+.modalLayer.open {
+    opacity: 1;
+    z-index: 999;
+}
+.modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+}
+.tabChange {
+    display: flex;
+    gap: 2px;
+    text-align: center;
+}
+.tabChange > div {
+    flex: 1;
+}
+.tabChange label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: rgb(219, 196, 255);
+    cursor: pointer;
+}
+.tabBGChange:checked + label {
+    background-color: #a677ff;
+}
+.tabChange input {
+    display: none;
+}
+.modalPanel {
+    position: relative;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    background-color: rgb(219, 196, 255);
+    overflow-y: scroll;
+}
+.tab {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.tab.active {
+    opacity: 1;
+}
+
+
+/* 制作物 */
+.works ul li {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    /* background: url(images/frameIvy.png) no-repeat center center / cover; */
+    /* border: 40px solid transparent;
+    border-image-source: url('images/frameIvy.png');
+    border-image-slice: 60 fill;
+    border-image-repeat: no-repeat; */
+}
+.works img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+.works span {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+.works ul li {
+    padding: 20px;
+    background-color: #ffffffa1;
+    border-radius: 20px;
+}
+.works li p,
+.works li details {
+    margin-top: 12px;
+}
+
+
+
+/* フッター */
+footer .link a {
+    color: #d9ff00;
+}
+footer .link a:hover {
+    border-bottom: #d9ff00 2px solid;
+}
+
+
+
+@media screen and (min-width:768px) {
+    details:active {
+        background-color: inherit;
+    }
+    details:hover {
+        background-color: rgba(255, 230, 255, 0.5);
+        cursor: pointer;
+    }
+
+
+    .mainTheme {
+        font-size: 2rem;
+    }
+
+    /* スキル */
+    /* .contentsWrap {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .contentsWrap > div {
+        width: 45%;
+        text-align: center;
+    } */
+    .contentsWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .lang {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+    .dataBase {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+    .library {
+        grid-column: 1;
+        grid-row: 3 / 4;
+    }
+    .tool {
+        grid-column: 2;
+        grid-row: 1 / 4;
+    }
+    .skills dl,
+    .skills details {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .tabChange > div {
+        flex: none;
+        flex-basis: 150px;
+    }
+
+
+    /* 制作物 */
+    .works ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 0 20px;
+    }
+    .works img {
+        height: 20vw;
+        max-height: 300px;
+    }
+    .works img:hover {
+        transform: scale(0.95);
+        transition: 1s ease;
+        filter: brightness(125%);
+        filter: drop-shadow(#4faaff 0 0 20px);
+    }
+
+
+    .drawerNav {
+        display: none;
+    }
+    /* .sidePanel {
+        top: 100px;
+        right: 0;
+        width: 18vw;
+        height: 400px;
+    } */
+
+}
+
+
+@media screen and (min-width:1200px) {
+    .headerMain p:nth-of-type(1) {
+        font-size: 2.5rem;
+    }
+}

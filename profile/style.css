@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+body {
+    /* background-color: rgb(194, 194, 194); */
+    /* background-color: rgba(17, 229, 236, 0.3); */
+    background: url(../images/irisImage.jpg) no-repeat center / cover;
+
+}
+
+.container {
+    background-color: rgba(196, 213, 235, 0.753);
+
+}
+
+
+header {
+    background: url(../images/irisImage.jpg) no-repeat center / cover;
+    /* background: url(../images/profile.jpg) no-repeat center / cover; */
+}
+
+/* 私について */
+.aboutMe .contents {
+    display: flex;
+}
+.aboutMe img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+.aboutMe dl {
+    width: 40%;
+    padding: 8px;
+}
+.aboutMe dt:not(:first-child) {
+    margin-top: 12px;
+}
+.aboutMe dd {
+    margin-left: 12px;
+}
+
+
+
+
+
+/* 経歴 */
+
+.history h3 {
+    border-top: 1px solid #000;
+    padding-top: 40px;
+}
+.history .hisElements {
+    padding: 0;
+    margin: 0;
+}
+.history .hisElements:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.history dt {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+.history dt span {
+    margin-left: 20px;
+}
+.history dd {
+    padding: 20px 0;
+    text-align: justify;
+}
+.history .empty {
+    padding: 0;
+}
+
+/* .history p {
+    margin-left: 20px;
+} */
+
+em {
+    color: #ff0000;
+}
+
+.history .hisImgTarget img {
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* 趣味 */
+.interest dt:not(:first-child) {
+    margin-top: 20px;
+}
+.interest dd {
+    margin: 8px 0 0 20px;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+    /* 私について */
+    .aboutMe .contents {
+        justify-content: center;
+    }
+    .aboutMe img {
+        max-width: 400px;
+        height: auto;
+    }
+    .aboutMe dl {
+        padding: 0 40px;
+    }
+    .aboutMe dd {
+        margin-left: 12px;
+    }
+
+
+
+    .hisElements .hisImgTarget img {
+        width: 50%;
+        height: 250px;
+        padding: 0 20px;
+    }
+    .hisElements .hisImgTarget {
+        display: flex;
+    }
+
+    .hisElements .hisImgTarget p {
+        display: block;
+        width: 50%;
+        padding: 0 20px;
+        margin: auto 0;
+    }
+
+    .history .hisElements:nth-of-type(3) .hisImgTarget img,
+    .history .hisElements:nth-of-type(5) .hisImgTarget img,
+    .history .hisElements:nth-of-type(7) .hisImgTarget img {
+        order: -1;
+    }
+
+
+
+}
